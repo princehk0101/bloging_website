@@ -1,0 +1,21 @@
+{
+    "params": 
+
+    {
+        "local_server": "True",
+        "local_uri": "mysql://root:@localhost/users_db",
+        "prod_uri": "mysql://root:@localhost/users_db",
+        "li_url" : "https://www.linkedin.com/in/princehk0101/",
+        "tw_url" : "https://x.com/princehk0101/",
+        "gh_url" : "https://github.com/princehk0101/",
+        "blog_name" : "Innovative_Blog",
+        "gmail-user" : "coder.hk07@gmail.com",
+        "gmail-password" : "bdol lphz vdta mlis",
+        "admin_user" : "prince",
+        "admin_password" : "prince",
+        
+        "no_of_posts" : 4,
+         "upload_location" : "D:\\my_blog\\static\\assets\\img\\"
+
+    }
+}
