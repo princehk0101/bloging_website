@@ -213,4 +213,4 @@ def contact():
     return render_template('contact.html', params=params , datetime=datetime)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    app.run(debug=False, port=8000)
