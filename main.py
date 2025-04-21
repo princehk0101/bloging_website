@@ -33,7 +33,7 @@ app.config.update(
 mail = Mail(app)
 
 # Database Configuration
-local_server = True
+local_server = os.getenv("LOCAL_SERVER", "True") == "True"
 if local_server:
     app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
 else:
