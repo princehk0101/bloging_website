@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, session, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from werkzeug.utils import secure_filename
-# from waitress import serve
+from waitress import serve
 import pymysql
 pymysql.install_as_MySQLdb()
 # Removed invalid import as it is not required
@@ -220,7 +220,7 @@ def contact():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    serve(app, host='127.0.0.1', port=5000)
 
     
 
