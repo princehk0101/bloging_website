@@ -15,7 +15,7 @@
         "admin_password" : "prince",
         
         "no_of_posts" : 4,
-         "upload_location" : "D:\\my_blog\\static\\assets\\img\\"
+         "upload_location" : "D:\\Blogging-website\\static\\assets\\img\\"
 
     }
 }

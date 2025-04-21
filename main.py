@@ -2,6 +2,11 @@ from flask import Flask, render_template, request, session, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from werkzeug.utils import secure_filename
+from waitress import serve
+import pymysql
+pymysql.install_as_MySQLdb()
+# Removed invalid import as it is not required
+
 
 from flask_mail import Mail
 import json
@@ -210,7 +215,15 @@ def contact():
 
         return "Message sent successfully!"
 
-    return render_template('contact.html', params=params , datetime=datetime)
+    return render_template('contact.html.j2', params=params , datetime=datetime)
+
+
 
 if __name__ == '__main__':
-    app.run(debug=False, port=8000)
+    serve(app, host='127.0.0.1', port=5000)
+
+
+    
+
+    
+
