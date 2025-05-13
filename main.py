@@ -33,7 +33,7 @@ app.config.update(
 mail = Mail(app)
 
 # Database Configuration
-local_server = True
+local_server = os.getenv("LOCAL_SERVER", "True") == "True"
 if local_server:
     app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
 else:
@@ -222,6 +222,8 @@ def contact():
 if __name__ == '__main__':
     # serve(app, host='127.0.0.1', port=5000)
     app.run(debug=True, port=5000)  
+
+    
 
 
     
